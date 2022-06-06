@@ -2,7 +2,9 @@ from tkinter import *
 #back-end
 def calculo():
     if in0.get().replace('.','',1).isdigit():
-        lb1['text']=(float(in0.get())*1.8)+32        
+        lb1['text']=(float(in0.get())*1.8)+32      
+        
+          
 
 #front-end
 root = Tk()
