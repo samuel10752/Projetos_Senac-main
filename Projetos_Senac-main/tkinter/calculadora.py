@@ -50,32 +50,38 @@ bt14 = Button(root, text="/", font='Arial 28', command=lambda:entrada('/'))
 bt15 = Button(root, text=".", font='Arial 28', command=lambda:entrada('.'))
 bt16 = Button(root, text='=', font='Arial 25', command=lambda:resultado())
 bt17 = Button(root, text="C", font='Arial 28', command=lambda:limpar())
+bt18 = Button (root, text='%', font= 'Arial 25', command=lambda: entrada('%'))
+bt19 = Button (root, text='⌫', font= 'Arial 25', command=lambda: limpar())
+bt20 = Button (root, text='√', font= 'Arial 25', command=lambda: entrada('√'))
 
 #widgets #linha 0
-root.geometry('500x370')
+root.geometry('300x440')
 lb.grid(row=0, column=0, columnspan=4, sticky=NSEW )
-bt17.grid(row=0, column=3,sticky=NSEW ) #C
-bt14.grid(row=4, column=2,sticky=NSEW ) #/
-bt15.grid(row=4,column=0,sticky=NSEW )#,
-bt16.grid(row=4,column=3, sticky=NSEW) #=
+bt17.grid(row=4, column=0,sticky=NSEW ) #C
+bt14.grid(row=5, column=3,sticky=NSEW ) #/
+bt15.grid(row=5,column=0,sticky=NSEW )#.
+bt16.grid(row=4,column=2, sticky=NSEW) #= #linha 4
+bt13.grid(row=2, column=3, sticky=NSEW) #X #linha 1
+bt11.grid(row=4, column=3, sticky=NSEW) #+ #linha 3
+bt12.grid(row=3, column=3, sticky=NSEW) #- #linha 2
+bt18.grid(row=5, column=2, sticky=NSEW) #⌫ linha 5
+bt19.grid(row=1, column=3, sticky=NSEW) #% linha 1
+bt20.grid(row=5, column=1, sticky=NSEW) #√ linha 5
 
 #Linha 1
 bt4.grid(row=1, column=0, sticky=NSEW) #7
 bt3.grid(row=1, column=1, sticky=NSEW) #8
 bt2.grid(row=1, column=2, sticky=NSEW) #9
-bt13.grid(row=1, column=3, sticky=NSEW) #X
 
 # linha 2
 bt7.grid(row=2, column=0, sticky=NSEW) #4
 bt6.grid(row=2, column=1, sticky=NSEW) #5
 bt5.grid(row=2, column=2, sticky=NSEW) #6
-bt12.grid(row=2, column=3, sticky=NSEW) #-
 
 #linha 3
 bt10.grid(row=3, column=0, sticky=NSEW) #1
 bt9.grid(row=3, column=1, sticky=NSEW) #2
 bt8.grid(row=3, column=2, sticky=NSEW) #3
-bt11.grid(row=3, column=3, sticky=NSEW) #+
 
 #linha 4
 bt1.grid(row=4, column=1,sticky=NSEW) #0
