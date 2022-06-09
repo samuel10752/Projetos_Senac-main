@@ -6,9 +6,23 @@ from datetime import datetime
 
 #janela 
 root = Tk()
+
+def capitura(event=None):    
+    x=Datainput_fr1.get().replace('/','')[:8]
+    y=''
+    if event.keysym.lower() == "backspace": return
+    for i in range(len(x)):
+        if not x[i] in '0123456789': continue
+        if i in [1,3]:
+            y+=x[i] + '/'
+        else:
+            y+=x[i]
+    Datainput_fr1.delete(0, 'end')
+    Datainput_fr1.insert(0, y)
+#CRÉDITO ao JeanExtreme002. Resposta disponível em: https://pt.stackoverflow.com/questions/492705/criando-um-entry-formatado-para-cpf-em-python-tkinter#:~:text=Para%20formatar%20o%20CPF%20enquanto,e%20a%20fun%C3%A7%C3%A3o%20de%20formata%C3%A7%C3%A3o.
+
+
 root.geometry('630x240+720+400') 
-
-
 fr1 = LabelFrame(root, background='#ededed')
 fr2 = LabelFrame(root, background='#ededed')
 fr3 = Frame(root, background='#ededed')
@@ -23,6 +37,7 @@ Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30)
 #Linha 2
 DataNasc_fr1 = Label (fr1, text='Data Nasc:', font="Sans-Serif  15")
 Datainput_fr1 = Entry (fr1, font='Sans-Serif  ')
+Datainput_fr1.bind("<KeyRelease>", capitura)
 
 #Linha 3
 CPF_fr1 = Label (fr1, text='CPF:', font="Sans-Serif  15")
