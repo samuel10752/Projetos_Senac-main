@@ -4,8 +4,7 @@ from tkinter.ttk import Style
 from datetime import datetime
      
 
-#janela 
-root = Tk()
+#Função / Data Nasc
 
 def capitura(event=None):    
     x=Datainput_fr1.get().replace('/','')[:8]
@@ -22,6 +21,8 @@ def capitura(event=None):
 #CRÉDITO ao JeanExtreme002. Resposta disponível em: https://pt.stackoverflow.com/questions/492705/criando-um-entry-formatado-para-cpf-em-python-tkinter#:~:text=Para%20formatar%20o%20CPF%20enquanto,e%20a%20fun%C3%A7%C3%A3o%20de%20formata%C3%A7%C3%A3o.
 
 
+#janela 
+root = Tk()
 root.geometry('630x240+720+400') 
 fr1 = LabelFrame(root, background='#ededed')
 fr2 = LabelFrame(root, background='#ededed')
