@@ -5,8 +5,6 @@ from datetime import datetime
      
 
 #Função / Data Nasc
-
-<<<<<<< HEAD
 def validar():
     valida = False
 
@@ -42,8 +40,7 @@ def validar():
     else:
         print( 'Data inválida')
 
-=======
->>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
+# funçao da /
 def data(event=None):    
     x=Datainput_fr1.get().replace('/','')[:8]
     y=''
