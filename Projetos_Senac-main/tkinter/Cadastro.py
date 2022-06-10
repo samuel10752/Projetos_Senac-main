@@ -6,6 +6,7 @@ from datetime import datetime
 
 #Função / Data Nasc
 
+<<<<<<< HEAD
 def validar():
     valida = False
 
@@ -41,6 +42,8 @@ def validar():
     else:
         print( 'Data inválida')
 
+=======
+>>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
 def data(event=None):    
     x=Datainput_fr1.get().replace('/','')[:8]
     y=''
@@ -79,9 +82,15 @@ def telefone(event=None):
     y=''
     if event.keysym.lower() == "backspace": return
     for i in range(len(x)):
+<<<<<<< HEAD
         if not x [i] in '0123456789': continue 
         if i in [0]:
             y+=x [i] + '('
+=======
+        if not x[i] in '00123456789': continue
+        if i in []:
+            y+=x[i] - '('
+>>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
         if i in [1]:
             y+=x[i] + ')'   
         elif i == 6:
@@ -109,20 +118,31 @@ Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30)
 
 #Linha 2
 DataNasc_fr1 = Label (fr1, text='Data Nasc:', font="Sans-Serif  15")
+<<<<<<< HEAD
 Datainput_fr1 = Entry (fr1, font='Sans-Serif ',width=9)
 Datainput_fr1.insert(0, 'DD/MM/AA')
+=======
+Datainput_fr1 = Entry (fr1, font='Sans-Serif  ',width=9)
+>>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
 Datainput_fr1.bind("<KeyRelease>", data)
 
 #Linha 3
 CPF_fr1 = Label (fr1, text='CPF:', font="Sans-Serif  15")
+<<<<<<< HEAD
 CPFinput_fr1 = Entry (fr1, font='Sans-Serif', width=13)
 CPFinput_fr1.insert(0, '000.000.000-00')
+=======
+CPFinput_fr1 = Entry (fr1, font='Sans-Serif  ', width=13)
+>>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
 CPFinput_fr1.bind("<KeyRelease>", CPf)
 
 #Linha 4
 Telefone_fr1 = Label (fr1, text='Telefone:', font="Sans-Serif  15")
 Telefoneinput_fr1 = Entry (fr1, font='Sans-Serif  ',width=18)
+<<<<<<< HEAD
 Telefoneinput_fr1.insert(0, '(00)00000-0000')
+=======
+>>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
 Telefoneinput_fr1.bind("<KeyRelease>", telefone)
 
 
@@ -159,8 +179,13 @@ UFinput_fr2 = Entry (fr2, font='Sans-Serif ',width=3)
 
 
 ############################Input#####################
+<<<<<<< HEAD
 Gravar_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green', command=validar)
 Limpar_fr3 = Button(fr3,text='Imprimir dados', font='Sans-Serif  15',bg='green')
+=======
+Gravar_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green')
+imprimir_fr3 = Button(fr3,text='Imprimir dados', font='Sans-Serif  15',bg='green')
+>>>>>>> 207af5da21cc27af5ff4c239171aa5bd6172452f
 
 #Frame
 fr1.grid()
