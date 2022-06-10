@@ -75,13 +75,11 @@ def CPf(event=None):
 #Vericficador de telefone
 
 def telefone(event=None):    
-    x=Telefoneinput_fr1.get().replace('(','').replace(')', '').replace('-','')[:11]
+    x=Telefoneinput_fr1.get().replace(')', '').replace('-','')[:11]
     y=''
     if event.keysym.lower() == "backspace": return
     for i in range(len(x)):
         if not x [i] in '0123456789': continue 
-        if i in [0]:
-            y+=x [i] + '('
         if i in [1]:
             y+=x[i] + ')'   
         elif i == 6:
@@ -90,8 +88,6 @@ def telefone(event=None):
             y+=x[i]
     Telefoneinput_fr1.delete(0, 'end')
     Telefoneinput_fr1.insert(0, y)
-
-    
 
 #janela 
 root = Tk()
@@ -111,23 +107,16 @@ Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30)
 DataNasc_fr1 = Label (fr1, text='Data Nasc:', font="Sans-Serif  15")
 Datainput_fr1 = Entry (fr1, font='Sans-Serif ',width=9)
 Datainput_fr1.insert(0, 'DD/MM/AA')
-
-Datainput_fr1 = Entry (fr1, font='Sans-Serif  ',width=9)
 Datainput_fr1.bind("<KeyRelease>", data)
 
 #Linha 3
 CPF_fr1 = Label (fr1, text='CPF:', font="Sans-Serif  15")
 CPFinput_fr1 = Entry (fr1, font='Sans-Serif', width=13)
-CPFinput_fr1.insert(0, '000.000.000-00')
-
-CPFinput_fr1 = Entry (fr1, font='Sans-Serif  ', width=13)
 CPFinput_fr1.bind("<KeyRelease>", CPf)
 
 #Linha 4
 Telefone_fr1 = Label (fr1, text='Telefone:', font="Sans-Serif  15")
 Telefoneinput_fr1 = Entry (fr1, font='Sans-Serif  ',width=18)
-
-Telefoneinput_fr1.insert(0, '(00)00000-0000')
 Telefoneinput_fr1.bind("<KeyRelease>", telefone)
 
 
