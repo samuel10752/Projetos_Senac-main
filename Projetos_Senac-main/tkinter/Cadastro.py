@@ -2,7 +2,11 @@ from cgitb import text
 from tkinter import*
 from tkinter.ttk import Style
 from datetime import datetime
-     
+import tkinter as tk
+
+def limpar():
+    Limpar_fr3["text"] = ''
+
 
 #Função / Data Nasc
 def validar():
@@ -57,7 +61,7 @@ def data(event=None):
 
 #Verificador de CPF
 
-def CPf(event=None):    
+def CPF(event=None):    
     x=CPFinput_fr1.get().replace('.','').replace('-', '')[:11]
     y=''
     if event.keysym.lower() == "backspace": return
@@ -89,19 +93,26 @@ def telefone(event=None):
     Telefoneinput_fr1.delete(0, 'end')
     Telefoneinput_fr1.insert(0, y)
 
+
+# função
+
+
 #janela 
 root = Tk()
+root.title('Cadastro')
 root.geometry('780x240+720+400') 
 fr1 = LabelFrame(root, background='#ededed')
 fr2 = LabelFrame(root, background='#ededed')
 fr3 = Frame(root, background='#ededed')
+fr4 = Frame(root)
+
 #ededed
 #Dados Pessoais
 Title_fr1 = Label (fr1, text='Dados Pessoais', font='Sans-Serif  20')
 
 #linha 1
 Nome_fr1 = Label (fr1, text='Nome:', font="Sans-Serif  15")
-Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30)
+Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30,)
 
 #Linha 2
 DataNasc_fr1 = Label (fr1, text='Data Nasc:', font="Sans-Serif  15")
@@ -112,13 +123,12 @@ Datainput_fr1.bind("<KeyRelease>", data)
 #Linha 3
 CPF_fr1 = Label (fr1, text='CPF:', font="Sans-Serif  15")
 CPFinput_fr1 = Entry (fr1, font='Sans-Serif', width=13)
-CPFinput_fr1.bind("<KeyRelease>", CPf)
+CPFinput_fr1.bind("<KeyRelease>", CPF)
 
 #Linha 4
 Telefone_fr1 = Label (fr1, text='Telefone:', font="Sans-Serif  15")
 Telefoneinput_fr1 = Entry (fr1, font='Sans-Serif  ',width=18)
 Telefoneinput_fr1.bind("<KeyRelease>", telefone)
-
 
 #Endereço
 
@@ -154,10 +164,10 @@ UFinput_fr2 = Entry (fr2, font='Sans-Serif ',width=3)
 
 ############################Input#####################
 Gravar_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green', command=validar)
-Limpar_fr3 = Button(fr3,text='Imprimir dados', font='Sans-Serif  15',bg='green')
+Limpar_fr3 = Button(fr3,text='Limpar Dados', font='Sans-Serif  15',bg='green')
 
 Gravar_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green')
-imprimir_fr3 = Button(fr3,text='Imprimir dados', font='Sans-Serif  15',bg='green')
+Limpar_fr3 = Button(fr3,text='Limpar dados', font='Sans-Serif  15',bg='green')
 
 
 #Frame
@@ -218,6 +228,7 @@ UFinput_fr2.grid(row=2, column=3, sticky=W)
 #Input
 Gravar_fr3.grid(row=3, column=7, sticky=NSEW)
 Limpar_fr3.grid(row=3, column=8,sticky=NSEW)
+
 
 #Rodar
 root.mainloop()
