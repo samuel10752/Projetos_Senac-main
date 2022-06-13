@@ -100,11 +100,6 @@ root = Tk()
 root.title('Cadastro')
 root.geometry('650x240+720+400') 
 
-#janela 
-root = Tk()
-root.title('Cadastro')
-root.geometry('780x240+720+400') 
-
 #linha 1
 fr1 = LabelFrame(root, background='#ededed')
 fr2 = LabelFrame(root, background='#ededed')
