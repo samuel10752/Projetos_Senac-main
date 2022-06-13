@@ -4,9 +4,6 @@ from tkinter.ttk import Style
 from datetime import datetime
 import tkinter as tk
 
-def limpar():
-    Limpar_fr3["text"] = ''
-
 
 #Função / Data Nasc
 def validar():
@@ -103,8 +100,8 @@ root.geometry('650x240+720+400')
 #linha 1
 fr1 = LabelFrame(root, background='#ededed')
 fr2 = LabelFrame(root, background='#ededed')
-fr3 = Frame(root, background='#ededed')
-fr4 = Frame(root)
+fr3 = LabelFrame(root, background='#ededed')
+fr4 = LabelFrame(root, background='#ededed')
 #ededed
 
 #função de Letra
@@ -112,6 +109,19 @@ var =StringVar()
 def caps(*args):
     var.set(var.get().title())
 var.trace("w", caps)
+
+#Troca de tela
+def cheke():
+    Salvo_fr3["text"] = "Salvo"
+
+def limpar():
+    limpar_fr3["text"] = ''
+
+def Voltar():
+    Voltar_fr3["text"] = 'Volta'
+
+var = IntVar()
+
 
 #Dados Pessoais
 Title_fr1 = Label (fr1, text='Dados Pessoais', font='Sans-Serif  20')
@@ -173,11 +183,10 @@ UFinput_fr2 = Entry (fr2, font='Sans-Serif ',width=3)
 
 
 ############################Input#####################
-Gravar_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green', command=validar)
-Limpar_fr3 = Button(fr3,text='Limpar Dados', font='Sans-Serif  15',bg='green')
+Salvo_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green', command=validar)
+Voltar_fr3 = Button(fr3,text='Voltar', font='Sans-Serif  15',bg='green')
+limpar_fr3 = Button(fr3,text='Limpar Dados', font='Sans-Serif  15',bg='green')
 
-Gravar_fr3 = Button(fr3, text='Gravar Dados', font='Sans-Serif  15',bg='green')
-Limpar_fr3 = Button(fr3,text='Limpar dados', font='Sans-Serif  15',bg='green')
 
 
 #Frame
@@ -236,8 +245,9 @@ UF_fr2.grid(row=2, column=2, sticky=E)
 UFinput_fr2.grid(row=2, column=3, sticky=W)
 
 #Input
-Gravar_fr3.grid(row=3, column=7, sticky=NSEW)
-Limpar_fr3.grid(row=3, column=8,sticky=NSEW)
+Salvo_fr3.grid(row=3, column=7, sticky=NSEW)
+Voltar_fr3.grid(row=3, column=8,sticky=NSEW)
+limpar_fr3.grid(row=3, column=9, sticky=NSEW)
 
 
 #Rodar
