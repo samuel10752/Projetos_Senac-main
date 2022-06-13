@@ -3,7 +3,7 @@ from tkinter import*
 from tkinter.ttk import Style
 from datetime import datetime
 import tkinter as tk
-
+from Função import*
 
 #Função / Data Nasc
 def validar():
