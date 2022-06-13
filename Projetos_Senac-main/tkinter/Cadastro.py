@@ -75,13 +75,15 @@ def CPf(event=None):
 #Vericficador de telefone
 
 def telefone(event=None):    
-    x=Telefoneinput_fr1.get().replace(')', '').replace('-','')[:11]
+    x=Telefoneinput_fr1.get().replace('(', '').replace(')', "").replace('-','')[:11]
     y=''
     if event.keysym.lower() == "backspace": return
     for i in range(len(x)):
         if not x [i] in '0123456789': continue 
-        if i in [1]:
-            y+=x[i] + ')'   
+        if i in [0]:
+         y+= '(' + x [i]      
+        elif i == 1:
+            y+=x[i] + ')'    
         elif i == 6:
             y+=x[i] + '-'
         else:
@@ -89,19 +91,29 @@ def telefone(event=None):
     Telefoneinput_fr1.delete(0, 'end')
     Telefoneinput_fr1.insert(0, y)
 
+
 #janela 
 root = Tk()
-root.geometry('780x240+720+400') 
+root.title('Cadastro')
+root.geometry('650x240+720+400') 
 fr1 = LabelFrame(root, background='#ededed')
 fr2 = LabelFrame(root, background='#ededed')
 fr3 = Frame(root, background='#ededed')
 #ededed
+
+
+#função de Letra
+var =StringVar()
+def caps(*args):
+    var.set(var.get().title())
+var.trace("w", caps)
+
 #Dados Pessoais
 Title_fr1 = Label (fr1, text='Dados Pessoais', font='Sans-Serif  20')
 
 #linha 1
 Nome_fr1 = Label (fr1, text='Nome:', font="Sans-Serif  15")
-Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30)
+Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ',textvariable=var, width=30)
 
 #Linha 2
 DataNasc_fr1 = Label (fr1, text='Data Nasc:', font="Sans-Serif  15")
