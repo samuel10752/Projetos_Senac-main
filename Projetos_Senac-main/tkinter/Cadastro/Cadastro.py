@@ -3,7 +3,7 @@ from tkinter import*
 from tkinter.ttk import Style
 from datetime import datetime
 import tkinter as tk
-from Função import*
+
 
 #Função / Data Nasc
 def validar():
@@ -120,8 +120,6 @@ def limpar():
 def Voltar():
     Voltar_fr3["text"] = 'Volta'
 
-var = IntVar()
-
 
 #Dados Pessoais
 Title_fr1 = Label (fr1, text='Dados Pessoais', font='Sans-Serif  20')
@@ -130,8 +128,6 @@ Title_fr1 = Label (fr1, text='Dados Pessoais', font='Sans-Serif  20')
 Nome_fr1 = Label (fr1, text='Nome:', font="Sans-Serif  15")
 
 Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ',textvariable=var, width=30)
-
-Nomeinput_fr1 = Entry (fr1, font='Sans-Serif ', width=30,)
 
 
 #Linha 2
