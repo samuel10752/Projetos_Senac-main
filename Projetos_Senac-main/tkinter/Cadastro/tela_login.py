@@ -4,7 +4,7 @@ from tkinter.ttk import Labelframe
 #criar janela
 
 root = Tk()
-fr1 = LabelFrame(root, bg='green')
+fr1 = LabelFrame(root)
 
 #geometria
 root.geometry('615x173+680+400')
@@ -14,9 +14,9 @@ root.resizable(width=False, height=False)
 #criar os widgets
 
 #---Frame 1---
-lb0_fr1 = Label(fr1, text='Login do Funcionario', font='Arial 22',bg='green')
-lb1_fr1 = Label(fr1, text='Usuario:', font="Arial 20",bg='green')
-lb2_fr1 = Label(fr1, text='Senha:', font="Arial 20",bg='green')
+lb0_fr1 = Label(fr1, text='Login do Funcionário', font='Arial 22')
+lb1_fr1 = Label(fr1, text='Usuário:', font="Arial 20")
+lb2_fr1 = Label(fr1, text='Senha:', font="Arial 20",width=7)
 
 #--Entrada ---
 int0_fr1 = Entry(fr1, font='Arial 18', width=35)
@@ -42,7 +42,7 @@ int0_fr1.grid(row=1,column=1,sticky=W,padx=110)
 int1_fr1.grid(row=2,column=1,sticky=W,padx=110)
 
 #---Butoon Função---
-tb0_fr1.grid(row=4, column=1, sticky=W, padx=55)
-tb1_fr1.grid(row=4, column=1, sticky=E,padx=110)
+tb0_fr1.grid(row=4, column=1, sticky=W, padx=110)
+tb1_fr1.grid(row=4, column=1, sticky=E,padx=100)
 #executar a janel4
 root.mainloop()
