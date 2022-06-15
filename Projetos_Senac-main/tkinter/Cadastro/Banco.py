@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter.ttk import Style
 #MODELO CRIADO POR BRENO 
 root = Tk()
 altura = root.winfo_screenheight()
@@ -134,7 +135,7 @@ lb2_fr1 = Label(fr1, text='Senha:', font=('Mongolian Baiti', "22" ),bg='#8a37cc'
 int0_fr1 = Entry(fr1, font='Arial 18', width=35).grid(row=1,column=1,sticky=W,padx=154)
 int1_fr1 = Entry(fr1, font='Arial 18', width=35,show="*").grid(row=2,column=1,sticky=W,padx=154)
 #--Button ---
-bt0_fr1 = Button(fr1,text='Entrar', font= ('Mongolian Baiti', "18", "bold") ,width=15,bg='#eb8334', fg='#fff', command= lambda: [fr1.grid_remove(), fr2.grid(row=0, column=0, pady=50)] ).grid(row=4, column=1, sticky=W, padx=155)
+bt0_fr1 = Button(fr1,text='Entrar', font= ('Mongolian Baiti', "18", "bold") ,width=15,bg='#eb8334', fg='#fff', command= lambda: [fr1.grid_remove(), fr2.grid(row=0, column=0, sticky=NSEW)] ).grid(row=4, column=1, sticky=W, padx=155)
 bt1_fr1 = Button(fr1, text='Voltar', font=('Mongolian Baiti', "18", "bold"),width=15,bg='#eb8334', fg='#fff', command= lambda: [fr1.grid_remove(),fr0.grid(row=0, column=0)]).grid(row=4, column=1, sticky=E,padx=153)
 #---Configuração do Frame---
 #fr1.grid()
@@ -155,21 +156,21 @@ fr2 = LabelFrame(root, bg="#8a37cc")
 
 # Infos
 
-lb0_fr2 = Label(fr2, text="Bem vindo a home dos funcionarios", font=("Mongolian Baiti", "17"),background="#8a37cc", fg="#f5f5f5").grid(row=1, column=0, columnspan=6, padx=200, sticky=EW)
+lb0_fr2 = Label(fr2, text="Bem Vindo a Home Dos Funcionarios", font=("Mongolian Baiti", "32"),background="#8a37cc", fg="#f5f5f5").grid(row=1, column=0, columnspan=6, padx=50, sticky=W)
 
-lb1_fr2 = Label(fr2, text="BRENO KAUAN", font=("Mongolian Baiti", "17"), background="#8a37cc", fg="#f5f5f5").grid(row=2, column=0, columnspan=6, sticky=EW, pady=10)
+lb1_fr2 = Label(fr2, text="BRENO KAUAN", font=("Mongolian Baiti", "20"), background="#8a37cc", fg="#f5f5f5").grid(row=2, column=0, columnspan=6, sticky=W, pady=10,padx=300)
 #lb1_fr2 o label acima se possivel é pra ser usado pra mostrar o nome do usuario registrado, ou sej aretirando o nome Breno Depois durante a finalização
 
-lb2_fr2 = Label(fr2, text="Avisos:", font=("Mongolian Baiti", "14", "bold"),background="#8a37cc", fg="#f5f5f5").grid(row=3, column=0, columnspan=6,)
+lb2_fr2 = Label(fr2, text="Avisos:", font=("Mongolian Baiti", "17", "bold"),background="#8a37cc", fg="#f5f5f5").grid(row=3, column=0,sticky=W,padx=350)
 
-lb3_fr2 = Label(fr2, text="Nenhuma atualização relevante no sistema ", font=("Mongolian Baiti", "10"),background="#8a37cc", fg="#f5f5f5").grid(row=4, column=0, columnspan=6, sticky=EW, pady=10)
+lb3_fr2 = Label(fr2, text="Nenhuma atualização relevante no sistema ", font=("Mongolian Baiti", "15"),background="#8a37cc", fg="#f5f5f5").grid(row=4, column=0, sticky=W,padx=220, pady=10)
 
 # Botões
-bt0_fr2 = Button(fr2, text="Logout do sistema ", font=("Mongolian Baiti", "11", "bold"), height=2,width=24, bg="#eb8334", fg="#fff", command= lambda: [fr2.grid_remove(), fr1.grid(row=0, column=0)] ).grid(row=5, column=1, columnspan=2, sticky=EW, pady=30)
+bt0_fr2 = Button(fr2, text="Logout", font=("Mongolian Baiti", "18", "bold"), height=2,width=20, bg="#eb8334", fg="#fff", command= lambda: [fr2.grid_remove(), fr1.grid(row=0, column=0)] ).grid(row=6, column=0,sticky=W,padx=250,pady=20)
 
-bt1_fr2 = Button(fr2, text="Cadastrar novo cliente", font=("Mongolian Baiti", "11", "bold"), height=2, bg="#eb8334", fg="#fff", command= lambda:[fr2.grid_remove(), fr2_1.grid(row=0,column=0)] ).grid(row=5, column=3, sticky=EW)
+bt1_fr2 = Button(fr2, text="Cadastrar novo cliente", font=("Mongolian Baiti", "18", "bold"), height=2,width=20, bg="#eb8334", fg="#fff", command= lambda:[fr2.grid_remove(), fr2_1.grid(row=0,column=0)] ).grid(row=5,column=0,sticky=W,padx=100)
 
-bt3_fr2 = Button(fr2, text="Excluir usuarios", font=("Mongolian Baiti", "11"," bold"), height=2, bg="#eb8334", fg="#fff").grid(row=5, column=4, sticky=EW)
+bt3_fr2 = Button(fr2, text="Excluir usuarios", font=("Mongolian Baiti", "18"," bold"), height=2,width=20, bg="#eb8334", fg="#fff").grid(row=5, column=0,columnspan=2,sticky=W,padx=400)
 
 
 #Frame fr2_1
