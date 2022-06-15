@@ -4,7 +4,7 @@ from tkinter import messagebox
 root = Tk()
 altura = root.winfo_screenheight()
 largura = root.winfo_screenwidth()
-root.geometry('1000x700') # declara o tamanho da jenela (400x300) tamanho inicial/ +100 +100 lugar onde ela vai abrir
+root.geometry('750x470') # declara o tamanho da jenela (400x300) tamanho inicial/ +100 +100 lugar onde ela vai abrir
 root.config(background='#fff') #background color
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
@@ -45,9 +45,9 @@ root.grid_columnconfigure(0, weight=1)
 
 fr0 = LabelFrame ()
 
-lb0_fr0 = Label(fr0, text='Seja Muito Bem-Vindo', font='Arial 30').grid(row=0,column=0, sticky=E,padx=300,ipady=200)
-bt0_fr0 = Button(fr0, text='Funcionário', font='Arial 25',width=10, command= lambda: [fr0.grid_remove(), fr1.grid(row=0, column=0)]).grid(row=1, column=0, sticky=W, padx=300)
-bt1_fr0 = Button(fr0, text='Usuario', font='Arial 25',width=8, command= lambda: [fr0.grid_remove(), fr4.grid(row=0, column=0)]).grid(row=1, column=0, sticky=E, padx=305)
+lb0_fr0 = Label(fr0, text='Seja Muito Bem-Vindo', font = ("Mongolian Baiti", "32" )).grid(row=0,column=0,columnspan=3, sticky=W,padx=170,ipady=120)
+bt0_fr0 = Button(fr0, text='Funcionário', font=('Mongolian Baiti' ,'26', "bold") ,width=10, command= lambda: [fr0.grid_remove(), fr1.grid(row=0, column=0)]).grid(row=1, column=0,columnspan=1, sticky=W, padx=150)
+bt1_fr0 = Button(fr0, text='Usuario', font= ('Mongolian Baiti' ,'26', "bold"),width=8, command= lambda: [fr0.grid_remove(), fr4.grid(row=0, column=0)]).grid(row=1, column=0,columnspan=2,sticky=W, padx=400)
 
 fr0.grid(row=0, column=0, sticky=NSEW)
 
