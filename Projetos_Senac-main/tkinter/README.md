@@ -6,7 +6,6 @@
 [![Instagraml](https://img.shields.io/badge/Instagram-8A2BE2?style=for-the-badge&logo=instagraml&logoColor=white)](https://www.instagram.com/samuelbarbosasl/)
 [![Whatsapp](https://img.shields.io/badge/Whatsapp-32CD32?style=for-the-badge&logo=instagraml&logoColor=white)](https://web.whatsapp.com/(35)998100933)
 
-![samuel107152 stats](https://github-readme-stats.vercel.app/api?username=Dryzin&show_icons=true&theme=tokyonight)
 
 ## Tecnologias Praticadas no dia a dia
 
